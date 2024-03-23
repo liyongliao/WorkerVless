@@ -2409,7 +2409,7 @@ rules:
   - DOMAIN-SUFFIX,twitch-ext.rootonline.de,🌍 国外媒体
   - DOMAIN-SUFFIX,twitch.tv,🌍 国外媒体
   - DOMAIN-SUFFIX,twitchcdn.net,🌍 国外媒体
-#   - USER-AGENT,Viu*,🌍 国外媒体
+  - USER-AGENT,Viu*,🌍 国外媒体
   - PROCESS-NAME,com.viu.pad,🌍 国外媒体
   - PROCESS-NAME,com.viu.phone,🌍 国外媒体
   - PROCESS-NAME,com.vuclip.viu,🌍 国外媒体
@@ -2425,9 +2425,9 @@ rules:
   - DOMAIN-SUFFIX,viu.com,🌍 国外媒体
   - DOMAIN-SUFFIX,viu.now.com,🌍 国外媒体
   - DOMAIN-SUFFIX,viu.tv,🌍 国外媒体
-#   - USER-AGENT,*youtube*,🌍 国外媒体
-#   - USER-AGENT,YouTube*,🌍 国外媒体
-#   - USER-AGENT,com.google.ios.youtube*,🌍 国外媒体
+  - USER-AGENT,*youtube*,🌍 国外媒体
+  - USER-AGENT,YouTube*,🌍 国外媒体
+  - USER-AGENT,com.google.ios.youtube*,🌍 国外媒体
   - DOMAIN-KEYWORD,youtube,🌍 国外媒体
   - DOMAIN,youtubei.googleapis.com,🌍 国外媒体
   - DOMAIN,yt3.ggpht.com,🌍 国外媒体
@@ -2442,10 +2442,10 @@ rules:
   - DOMAIN-SUFFIX,youtubekids.com,🌍 国外媒体
   - DOMAIN-SUFFIX,yt.be,🌍 国外媒体
   - DOMAIN-SUFFIX,ytimg.com,🌍 国外媒体
-#   - USER-AGENT,*YouTubeMusic*,🌍 国外媒体
-#   - USER-AGENT,*com.google.ios.youtubemusic*,🌍 国外媒体
-#   - USER-AGENT,YouTubeMusic*,🌍 国外媒体
-#   - USER-AGENT,com.google.ios.youtubemusic*,🌍 国外媒体
+  - USER-AGENT,*YouTubeMusic*,🌍 国外媒体
+  - USER-AGENT,*com.google.ios.youtubemusic*,🌍 国外媒体
+  - USER-AGENT,YouTubeMusic*,🌍 国外媒体
+  - USER-AGENT,com.google.ios.youtubemusic*,🌍 国外媒体
   - DOMAIN,music.youtube.com,🌍 国外媒体
 # Telegram
 #PROCESS-NAME,Telegram.exe
