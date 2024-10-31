@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2024-10-31 22:01:52
+# 生成时间：2024-10-31 22:04:50
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -57,41 +57,197 @@ tun:
     - 8.8.4.4
     - 1.1.1.1
     - 1.0.0.1
-proxies: []
+proxies:
+  - name: 优选CF
+    port: 443
+    server: 3.112.21.102
+    type: vless
+    network: ws
+    tls: true
+    udp: true
+    servername: dds.qyan.cc
+    skip-cert-verify: true
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: dds.qyan.cc
+    uuid: b537cd5f-cda3-42bb-88af-b68500e4caba
+    client-fingerprint: randomized
+  - name: 优选US节点
+    port: 2082
+    server: 104.16.53.169
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /xiaomi
+      headers:
+        host: us.qyan.cc
+    uuid: 67151a13-75b3-4a71-e6b9-95150b8ec58c
+  - name: 直连
+    port: 80
+    server: 148.135.127.196
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /qyan
+    uuid: c930a9e5-4cf2-4588-ef43-52097483b85f
+  - name: 优选CFUS
+    port: 80
+    server: 104.18.1.221
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /qyan
+      headers:
+        host: us.qyan.cc
+    uuid: c930a9e5-4cf2-4588-ef43-52097483b85f
+  - name: xiaomi|fgnb.love@xray.com
+    port: 2082
+    server: 104.18.1.221
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /xiaomi
+      headers:
+        host: us.qyan.cc
+    uuid: 67151a13-75b3-4a71-e6b9-95150b8ec58c
+  - name: xiaomi_1
+    port: 2082
+    server: us.qyan.cc
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /xiaomi
+    uuid: 67151a13-75b3-4a71-e6b9-95150b8ec58c
+  - name: dds.qyan.cc
+    port: 80
+    server: dds.qyan.cc
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: dds.qyan.cc
+    uuid: b537cd5f-cda3-42bb-88af-b68500e4caba
+  - name: xiaomi_2
+    port: 2082
+    server: 148.135.127.198
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /xiaomi
+    uuid: 67151a13-75b3-4a71-e6b9-95150b8ec58c
+  - name: qyan
+    port: 80
+    server: us.qyan.cc
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /qyan
+    uuid: c930a9e5-4cf2-4588-ef43-52097483b85f
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 优选CF
+      - 优选US节点
+      - 直连
+      - 优选CFUS
+      - xiaomi|fgnb.love@xray.com
+      - xiaomi_1
+      - dds.qyan.cc
+      - xiaomi_2
+      - qyan
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - DIRECT
+      - 优选CF
+      - 优选US节点
+      - 直连
+      - 优选CFUS
+      - xiaomi|fgnb.love@xray.com
+      - xiaomi_1
+      - dds.qyan.cc
+      - xiaomi_2
+      - qyan
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 优选CF
+      - 优选US节点
+      - 直连
+      - 优选CFUS
+      - xiaomi|fgnb.love@xray.com
+      - xiaomi_1
+      - dds.qyan.cc
+      - xiaomi_2
+      - qyan
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 优选CF
+      - 优选US节点
+      - 直连
+      - 优选CFUS
+      - xiaomi|fgnb.love@xray.com
+      - xiaomi_1
+      - dds.qyan.cc
+      - xiaomi_2
+      - qyan
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 优选CF
+      - 优选US节点
+      - 直连
+      - 优选CFUS
+      - xiaomi|fgnb.love@xray.com
+      - xiaomi_1
+      - dds.qyan.cc
+      - xiaomi_2
+      - qyan
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 优选CF
+      - 优选US节点
+      - 直连
+      - 优选CFUS
+      - xiaomi|fgnb.love@xray.com
+      - xiaomi_1
+      - dds.qyan.cc
+      - xiaomi_2
+      - qyan
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,6 +270,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 优选CF
+      - 优选US节点
+      - 直连
+      - 优选CFUS
+      - xiaomi|fgnb.love@xray.com
+      - xiaomi_1
+      - dds.qyan.cc
+      - xiaomi_2
+      - qyan
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
